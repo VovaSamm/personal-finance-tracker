@@ -21,7 +21,7 @@ def two_sum(list_of_number: list,sum_two:(int,float),):
     for i in range(len(list_of_number)):
         for j in range(len(list_of_number)):
             if i!=j and  list_of_number[i]+ list_of_number[j]==sum_two:
-                return list_of_number[i], list_of_number[j]
+                return i, j
 
     return 'Not sum'
 
