@@ -1,6 +1,6 @@
 .venv/
 .idea/
-.env
+personal_finanse_tracker/.env
 
 
 # Byte-compiled / optimized / DLL files
@@ -140,7 +140,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+personal_finanse_tracker/.env
 .envrc
 .venv
 env/
