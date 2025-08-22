@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Форма дохода{% endblock %}
+{% block content %}
+<h2>{{ form.instance.pk|yesno:"Редактировать доход,Добавить доход" }}</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-success">Сохранить</button>
+  <a href="{% url 'income_list' %}" class="btn btn-secondary">Назад</a>
+</form>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Expense,Income
+from .models import Expense
 
 # Register your models here.
 @admin.register(Expense)
@@ -8,8 +8,3 @@ class ExpenseAdmin(admin.ModelAdmin):
     list_filter = ('category','data')
     search_fields = ('title',)
 
-@admin.register(Income)
-class IncomeAdmin(admin.ModelAdmin):
-    list_display = ('title','amount','source','data')
-    list_filter = ('source','data')
-    search_fields = ('title',)
