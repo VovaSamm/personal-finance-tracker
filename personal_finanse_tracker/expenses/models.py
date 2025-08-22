@@ -11,7 +11,7 @@ class Expense(models.Model):
         ('ENTERTAINMENT','Развлечение'),
         ('OTHER','Другое')
     ]
-
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='expense')
     title=models.CharField(max_length=100, verbose_name='Название')
     amount=models.DecimalField(max_digits=10, decimal_places=2,verbose_name='Сумма')
     category=models.CharField(max_length=20,choices=CATEGORY_CHOICES,default='OTHER',verbose_name='Категория')
